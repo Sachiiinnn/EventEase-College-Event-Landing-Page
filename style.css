@@ -11,7 +11,7 @@
     transition: 0.2s linear all;
 }
 html{
-    font-size: 70%;
+    font-size: 65%;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -23,6 +23,18 @@ html{
 img{
     width: 300px;
     height: 100px;
+}
+.submit{
+    display: inline-block;
+    background: #27165c;
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    padding: 0.9rem 3rem;
+    color: #f8c301;
+}
+.submit:hover{
+    letter-spacing: 0.2rem;
 }
 .header{
     background: #27165c;
@@ -47,9 +59,8 @@ img{
 }
 .header .navbar a:hover,
 .header .navbar a.active{
-    color: #27165c;
-    background: #f8c301;
-    border-radius: 12%;
+
+    border-radius: 0%;
 }
 
 .header .icon div{
@@ -95,12 +106,12 @@ img{
 
 .loginFormContainer{
     position: fixed;
-    top: -100%;
+    top: -110%;
     left: 0;
     z-index: 100000;
     min-height: 100vh;
     width: 100%;
-    background: rgba(0, 0, 0, 0.623);
+    background: rgba(0, 0, 0, 0.788);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,6 +148,7 @@ img{
     color: #333;
 }
 .loginFormContainer #remember{
+    padding-top: 1rem;
     margin: 2rem 0;
 }
 .loginFormContainer label{
@@ -150,7 +162,7 @@ img{
 }
 .loginFormContainer p{
     color: #666;
-    padding: 0.5rem 0;
+    padding-bottom: 1rem ;
     font-size: 1.5rem;
 }
 .loginFormContainer p a{
@@ -163,4 +175,56 @@ img{
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
+}
+
+
+@media(max-width:991px) {
+    html{
+        font-size: 60%;
+    }
+    .header{
+        padding: 1rem 1.5rem;
+    }
+}
+@media(max-width: 890px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        padding: 1rem 1.5rem;
+    }
+}
+@media(max-width: 780px){
+    #menuButton{
+        display: initial;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000;
+        border-radius: 0.2rem solid #222;
+        clip-path: polygon(0 0,100% 0, 100% 0,0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+    }
+    .header .navbar a{
+        display: flex;
+        background-color: #333;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 45%;
+    }
+    .header .icon #searchButton{
+        display: none;
+    }
 }
