@@ -17,7 +17,7 @@
             <a href="#Home" class="active">Home</a>
             <a href="#About">About</a>
             <a href="#Gallery">Gallery</a>
-            <a href="#Register">Register</a>
+            <a href="#Register" id="Register">Register</a>
             <a href="#Contact">Contact</a>
         </nav>
 
@@ -41,9 +41,47 @@
             <input type="submit" value="Login now" class="submit">
             <input type="checkbox" id="remember">
             <label for="remeber" >Remember Me</label>
-            <p>Forgot Password? <a href="#">Click me</a></p>
-            <p>Don't have an account? <a href="#">Register now</a></p>
+            <p>Forgot Password? <a href="#" onclick="openForgotPassword()">Click me</a></p>
+            <p>Don't have an account? <a href="#" class="now">Register now</a></p>
         </form>
+    </div>
+
+    <div class="registrationFormContainer">
+        <form>
+            <div id="form1" class="close-btn">×</div>
+            <h3>Register</h3>
+            <div class="box">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="box">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+            </div>
+            <div class="box">
+                <button type="submit" class="submit1">Register</button>
+            </div>
+            <p>Already have an account? <a href="#" class="log">Login</a></p>
+        </form>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div class="forgotPasswordContainer" id="forgotPassword">
+    <form action="#">
+        <h3>Reset Password</h3>
+        <p>Enter your email address to receive a password reset link.</p>
+        <input type="email" placeholder="Your Email" class="box" required>
+        <button type="submit" class="submit">Send Reset Link</button>
+        <p><a href="#" onclick="closeForgotPassword()">Back to Login</a></p>
+    </form>
     </div>
 
     <section class="home" id="Home">
@@ -89,13 +127,28 @@
             </div>
         </div>
     </section>
-    <section class="features">
+    <section class="features" id="About">
         <div class="container">
             <h2><span>Why Choose</span> <span class="highlight">EventEase</span>?</h2>
             <p>Our comprehensive platform provides everything you need to create, manage, and showcase unforgettable college events with professional-grade features.</p>
 
             <div class="feature-grid">
 
+            <div class="feature-card">
+                <i class="fas fa-mobile" alt="Responsive Design"></i>
+                <h3>Responsive Design</h3>
+                <p>Perfect display across all devices - desktop, tablet, and mobile. Your events look professional everywhere</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock clk" alt="Countdown Timers"></i>
+                <h3>Countdown Timers</h3>
+                <p>Build excitement with dynamic countdown timers that create urgency and anticipation for your events.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-pen" alt="Animated Sections"></i>
+                <h3>Animated Sections</h3>
+                <p>Engaging animations and transitions that captivate your audience and create memorable experiences.</p>
+            </div>
             <div class="feature-card">
                 <i class="fas fa-users" alt="Easy Registration"></i>
                 <h3>Easy Registration</h3>
@@ -131,17 +184,17 @@
                     features, every aspect is crafted to ensure smooth event planning and execution.
                     </p>
                     <ul class="feature-list">
-                        <li> Experienced team with a flair for the extraordinary.</li>
-                        <li> Custom solutions for every event size and budget.</li>
-                        <li> Reliable vendors, seamless coordination, and exceptional results.</li>
-                        <li> Optimized tools for workshops, fests, and seminars.</li>
+                        <li> Single-page responsive layout</li>
+                        <li> Clean, modern design aesthetic</li>
+                        <li> Interactive countdown timers</li>
+                        <li> Optimized for all college events</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="event-types">
+    <section class="event-types" id="Gallery">
         <div class="event-header">
             <h2>Perfect for <span class="highlight">Every Event</span></h2>
             <p>Whether you're organizing a seminar, festival, or workshop, EventEase adapts to your unique needs and delivers exceptional results.</p>

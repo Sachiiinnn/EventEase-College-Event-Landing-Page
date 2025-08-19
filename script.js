@@ -9,6 +9,7 @@ document.querySelector('#searchButton').onclick = () =>{
 const formButton = document.querySelector('#loginButton');
 const loginForm = document.querySelector('.loginFormContainer');
 const formClose = document.querySelector('#formClose');
+const reg = document.querySelector('.now');
 
 formButton.addEventListener('click', () =>{
     loginForm.classList.add("active");
@@ -18,6 +19,10 @@ formButton.addEventListener('click', () =>{
 });
 
 formClose.addEventListener('click', () =>{
+    loginForm.classList.remove("active")
+})
+reg.addEventListener('click', ()=>{
+    registrationForm.classList.add('active');
     loginForm.classList.remove("active")
 })
 
@@ -64,3 +69,34 @@ const targetDate = new Date("2025-09-20T00:00:00").getTime();
 
 
   setInterval(updateCountdown, 1000);
+
+
+
+  
+const registerButton = document.getElementById('Register');
+const registrationForm = document.querySelector('.registrationFormContainer');
+const closeButton = document.getElementById('form1');
+const log = document.querySelector('.log');
+
+registerButton.addEventListener('click', () => {
+  registrationForm.classList.add('active');
+});
+
+closeButton.addEventListener('click', () => {
+  registrationForm.classList.remove('active');
+});
+
+log.addEventListener('click', () =>{
+  loginForm.classList.add("active");
+  registrationForm.classList.remove('active');
+})
+
+function openForgotPassword() {
+  document.getElementById("forgotPassword").classList.add("active");
+  loginForm.classList.remove('active');
+}
+
+function closeForgotPassword() {
+  document.getElementById("forgotPassword").classList.remove("active");
+  loginForm.classList.add('active');
+}
